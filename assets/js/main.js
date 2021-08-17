@@ -5,9 +5,9 @@
   // splash screen
   document.addEventListener('DOMContentLoaded', e => {
     let main = document.getElementsByTagName('main');
-    let header = document.getElementsByTagName('header');
-    main.classList.add('display-none');
+    let header = document.getElementsByName('header');
     header.classList.add('display-none');
+    main.classList.add('display-none');
   })
 
 
