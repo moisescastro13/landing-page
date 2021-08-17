@@ -2,6 +2,12 @@
 (function() {
   "use strict";
 
+  // splash screen
+  document.addEventListener('DOMContentLoaded', e => {
+    
+  })
+
+
   /**
    * Easy selector helper function
    */
