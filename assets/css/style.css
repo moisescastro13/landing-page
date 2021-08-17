@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: -10;
+  z-index: 999;
   background: #272829;
   text-align: center;
   line-height: 90vh;
@@ -38,6 +38,11 @@ h1, h2, h3, h4, h5, h6 {
   color: white
 }
 
+
+.display-none {
+display: none;
+z-index: -1;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
