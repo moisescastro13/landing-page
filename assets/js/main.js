@@ -6,6 +6,7 @@
   document.addEventListener('DOMContentLoaded', e => {
     let main = document.getElementsByTagName('main');
     let header = document.getElementById('header');
+    let footer = document.getElementById('footer');
     header.classList.add('display-none');te
     main.classList.add('display-none');
   })
