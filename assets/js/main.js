@@ -7,8 +7,9 @@
     let main = document.getElementsByTagName('main');
     let header = document.getElementById('header');
     let footer = document.getElementById('footer');
-    header.classList.add('display-none');te
+    header.classList.add('display-none');
     main.classList.add('display-none');
+    footer.classList.add('display-none');
   })
 
 
