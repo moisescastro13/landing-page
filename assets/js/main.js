@@ -7,6 +7,7 @@
     let main = document.getElementsByTagName('main');
     let header = document.getElementsByName('header');
     header.classList.add('display-none');
+    console.log(header);
     main.classList.add('display-none');
   })
 
