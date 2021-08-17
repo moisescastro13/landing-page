@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #272829;
   text-align: center;
   line-height: 90vh;
+  overflow:none;
 
 }
 .text-splash {
