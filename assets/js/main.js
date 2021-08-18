@@ -3,19 +3,30 @@
   "use strict";
 
   // splash screen
-  document.addEventListener('DOMContentLoaded', e => {
-    let main = document.getElementsByTagName('main');
-    let header = document.getElementById('header');
-    let footer = document.getElementById('footer');
-    header.classList.add('display-none');
-    main.classList.add('display-none');
-    footer.classList.add('display-none');
+  document.addEventListener('DOMContentLoaded', () => {
+    let body = document.body;
+    let splash = document.querySelector('.splash');
+    let logSpan = document.querySelectorAll('.logo');
+
+    logSpan.forEach((ele,idx) => {
+      setTimeout(() => ele.classList.add('active'),(idx + 1) *400)
+    });
+    setTimeout(() => {
+      logSpan.forEach((ele,idx) => {
+        setTimeout(() => {
+          ele.classList.toggle('active');
+          ele.classList.toggle('fade');
+        },(idx + 1) * 200);
+      });
+    }, 3000);
+    setTimeout(() => {      
+      splash.style.top = '-100vh';
+      body.classList -= 'hidden-overflow';
+
+    }, 4600);
+
   })
 
-
-  /**
-   * Easy selector helper function
-   */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -25,9 +36,6 @@
     }
   }
 
-  /**
-   * Easy event listener function
-   */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
@@ -66,9 +74,6 @@
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
-  /**
-   * Scrolls to an element with header offset
-   */
   const scrollto = (el) => {
     let elementPos = select(el).offsetTop
     window.scrollTo({
